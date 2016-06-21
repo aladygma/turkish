@@ -1,0 +1,23 @@
+.outl {
+  outline: 1px solid green;
+}
+
+.invisible {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
