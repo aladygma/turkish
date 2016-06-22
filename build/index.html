@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <!-- <link rel="stylesheet" href="css/mobile-style.css"> -->
+  <link rel="stylesheet" type="text/css" href="fonts/fontello/css/fontello.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Coral travel</title>
+<!--   <link rel="stylesheet" href="css/mobile-style.css">
+ -->  <title>Coral travel</title>
 </head>
 <body>
   <div class="header">
 
     <div class="top-line">
-      <div class="container">
-        <div class="m-sandwich"></div>
-        <div class="m-phone"></div>
+      <div class="container clearfix">
+        <div class="sandwich-container">
+          <div class="sandwich">Меню</div>
+        </div>
+        <div class="phone">+38 050 -761-65-93</div>
         <ul class="phones">
           <li class="phones__item">+38 050 -761-65-93</li>
           <li class="phones__item">+38 050 -761-65-93</li>
@@ -23,24 +26,24 @@
       </div>
     </div>
 
-    <ul class="m-main-menu">
-      <li class="m-main-menu__item">
-        <a href="#" class="m-main-menu__link">Горящий тур</a>
+    <ul class="mobile-menu" id="mobile-menu">
+      <li class="mobile-menu__item">
+        <a href="#" class="main-menu__link">Горящий тур</a>
       </li>
-      <li class="m-main-menu__item">
-        <a href="#" class="m-main-menu__link">Почему турция</a>
+      <li class="mobile-menu__item">
+        <a href="#" class="main-menu__link">Почему турция</a>
       </li>
-      <li class="m-main-menu__item">
-        <a href="#" class="m-main-menu__link">Факты о турции</a>
+      <li class="mobile-menu__item">
+        <a href="#" class="main-menu__link">Факты о турции</a>
       </li>
-      <li class="m-main-menu__item">
-        <a href="#" class="m-main-menu__link">преимущества</a>
+      <li class="mobile-menu__item">
+        <a href="#" class="main-menu__link">преимущества</a>
       </li>
-      <li class="m-main-menu__item">
-        <a href="#" class="m-main-menu__link">Выбор отеля</a>
+      <li class="mobile-menu__item">
+        <a href="#" class="main-menu__link">Выбор отеля</a>
       </li>
-      <li class="m-main-menu__item">
-        <a href="#" class="m-main-menu__link">Контакты</a>
+      <li class="mobile-menu__item">
+        <a href="#" class="main-menu__link">Контакты</a>
       </li>
     </ul>
 
@@ -141,38 +144,40 @@
         </div>
       </div>
     </div>
-    <div class="show-more" id="id-show-more--turkish-features">Еще</div>
+    <div class="show-more" id="id-show-more--turkish-features">еще (3)</div>
   </div>
 
   <div class="facts">
-    <div class="fact-header">
-      <h2 class="fact-header__title">Интересные факты о турции</h2>
+    <div class="facts-header">
+      <h2 class="facts-header__title">Интересные факты о турции</h2>
     </div>
-    <div class="fact-list">
-      <i class="fact-list__control--left">Назад</i>
-      <i class="fact-list__control--right">Вперед</i>
-      <div class="fact-list__item">
-        <img src="image/pict/fact--1.jpg" alt="fact-1" width="188" height="188">
-        <p class="factlist__text">В турецкой больнице вам бесплатно померяют давление и сделают прививку от гриппа</p>
-      </div>
-      <div class="fact-list__item">
-        <img src="image/pict/fact--2.jpg" alt="fact-2" width="188" height="188">
-        <p class="factlist__text">В турецкой больнице вам бесплатно померяют давление и сделают прививку от гриппа</p>
-      </div>
-      <div class="fact-list__item">
-        <img src="image/pict/fact--3.jpg" alt="fact-3" width="188" height="188">
-        <p class="fact-list__text">В турецкой больнице вам бесплатно померяют давление и сделают прививку от гриппа</p>
-      </div>
-      <div class="fact-list__item">
-        <img src="image/pict/fact--4.jpg" alt="fact-4" width="188" height="188">
-        <p class="fact-list__text">В турецкой больнице вам бесплатно померяют давление и сделают прививку от гриппа</p>
+    <div class="facts-list-wrapper">
+      <div class="facts-list">
+        <i class="facts-list__control facts-list__control--left facts-list__control--disabled">Назад</i>
+        <i class="facts-list__control facts-list__control--right">Вперед</i>
+        <div class="facts-list__item">
+          <img src="image/pict/fact--1.jpg" alt="fact-1" width="188" height="188">
+          <p class="facts-list__text">В турецкой аптеке вам бесплатно померяют давление и сделают прививку от гриппа</p>
+        </div>
+        <div class="facts-list__item">
+          <img src="image/pict/fact--2.jpg" alt="fact-2" width="188" height="188">
+          <p class="facts-list__text">В турецкой аптеке вам бесплатно померяют давление и сделают прививку от гриппа</p>
+        </div>
+        <div class="facts-list__item">
+          <img src="image/pict/fact--3.jpg" alt="fact-3" width="188" height="188">
+          <p class="facts-list__text">В турецкой аптеке вам бесплатно померяют давление и сделают прививку от гриппа</p>
+        </div>
+        <div class="facts-list__item">
+          <img src="image/pict/fact--4.jpg" alt="fact-4" width="188" height="188">
+          <p class="facts-list__text">В турецкой аптеке вам бесплатно померяют давление и сделают прививку от гриппа</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="our-company">
     <div class="our-company-header">
-      <i class="block-divisor"></i>
+      <div class="block-divisor"></div>
       <h2 class="our-company-header__title">Наша компания как гарантийный партнер этой страны</h2>
     </div>
     <ul class="company-features">
@@ -180,24 +185,27 @@
         <img src="image/pict/our--1.png" alt="our-1" width="256" height="121">
       </li>
       <li class="company-features__item">
-        <span class="company-features__tag"></span>
-        <p class="company-features__text"></p>
+        <span class="company-features__tag">20 лет</span>
+        <p class="company-features__title">Более 20 лет работы с турецким направлением</p>
+        <p class="company-features__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
         <span class="company-features__page">01</span>
       </li>
       <li class="company-features__item company-features__item--img-circle">
         <img src="image/pict/our--2.png" alt="our-2" width="127" height="125">
       </li>
       <li class="company-features__item">
-        <span class="company-features__tag"></span>
-        <p class="company-features__text"></p>
+        <span class="company-features__tag">Цены</span>
+        <p class="company-features__title">Лучшие цены по всей Украине И Собственная принимающая сторона в Турции</p>
+        <p class="company-features__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
         <span class="company-features__page">02</span>
       </li>
       <li class="company-features__item company-features__item--img-pig">
         <img src="image/pict/our--3.png" alt="our-3" width="136" height="140">
       </li>
       <li class="company-features__item">
-        <span class="company-features__tag"></span>
-        <p class="company-features__text"></p>
+        <span class="company-features__tag">Поддержка</span>
+        <p class="company-features__title">Обеспечен поддержкой всемирного холдинда OTI group</p>
+        <p class="company-features__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
         <span class="company-features__page">03</span>
       </li>
     </ul>
@@ -206,100 +214,151 @@
   <div class="speed-order">
     <form class="speed-order-form" action="#" method="POST">
       <p class="speed-order-form__slogan">Успейте заказать отдых с детьми, заплатив только за cебя!</p>
-      <div class="fieldrow">
-        <input type="text" class="fieldrow__input">
-        <input type="text" class="fieldrow__input">
+      <div class="fields-row">
+        <input type="text" class="fields-row__input" placeholder="Имя">
+        <input type="text" class="fields-row__input" placeholder="Телефон">
         <div class="require-field-wrapper">
-          <input type="text" class="m-fieldrow__input fieldrow__input">
+          <input type="text" class="fields-row__input fields-row__input--email" placeholder="Email">
         </div>
       </div>
-      <input type="submit" class="m-speed-order-form__submit" value="Отправить"> 
+      <input type="submit" class="speed-order-form__submit" value="Отправить">
     </form>
   </div>
 
   <div class="best-hotels">
-    <div class="best-hotelheader ">
-      <i class="block-divisor">Разделитель</i>
+    <div class="best-hotels-header ">
+      <div class="block-divisor"></div>
       <h2 class="best-hotels__title">Лучшие отели турции</h2>
     </div>
-    <div class="best-hotel">
-      <div class="best-hotel-wrapper">
-        <div class="best-hotel-info">
-          <h3 class="best-hotel__name">Otium eco club(Сиде)</h3>
-          <div class="best-hotel-ratings">
-            <div class="best-hotel-ratings__stars">
-              <i class="rating-star"></i>
-              <i class="rating-star"></i>
-              <i class="rating-star"></i>
-              <i class="rating-star rating-star--empty"></i>
-            </div>
- -best-hotel-ratings__numbers">
-              Рейтинг<span>(4.4)</span>
-            </div>
-          </div>
-          <i class="best-hotel-info__divisor">Разделитель</i>
-          <p class="best-hotel-info__fact">Интересный факт об отеле</p>
-          <p class="best-hotel-info__fact">Интересный факт об отеле</p>
-          <p class="best-hotel-info__fact">Интересный факт об отеле</p>
-          <div class="best-hotel-actions">
-            <a href="#" class="best-hotel-actions__booking">Заказать</a>
-            <a href="#" class="best-hotel-actions__price">Стоимость</a>
-          </div>
+    <div class="best-hotels-list-wrapper">
+      <div class="best-hotel">
+     <div class="best-hotel-wrapper clearfix">
+       <div class="best-hotel-info">
+        <div class="mobile-image__preview">
+          <img src="image/pict/best-small--1.jpg" alt="preview-1" width="288" height="288">
         </div>
-        <div class="best-hotel-images">
-          <img src="image/pict/best-big--1.jpg" alt="best-hotel-1" class="l-best-hotel__main-image" width="806" height="570">
-          <img src="image/pict/best-middle--1.jpg" alt="best-hotel-1" class="best-hotel__main-image" width="625" height="570">
-          <img src="image/pict/best-small--1.jpg" alt="best-hotel-preview-1" class="best-hotel__preview-image" width="350" height="350">
+         <h3 class="best-hotel__name">Otium eco club (Сиде)</h3>
+         <div class="best-hotel-ratings">
+           <div class="best-hotel-ratings__stars">
+             <i class="icon-star-filled"></i>
+             <i class="icon-star-filled"></i>
+             <i class="icon-star-filled"></i>
+             <i class="icon-star-filled"></i>
+             <i class="icon-star-filled icon-star-filled--empty"></i>
+           </div>
+           <div class="best-hotel-ratings__numbers">
+             Рейтинг<span> (4.4)</span>
+           </div>
+         </div>
+         <div class="block-divisor best-hotel-info__divisor"></div>
+         <p class="best-hotel-info__facts">Интересный факт об отеле<br>
+         Интересный факт об отеле<br>Интересный факт об отеле</p>
+         <div class="best-hotel-actions">
+           <a href="#" class="best-hotel-actions__booking">Заказать</a>
+           <a href="#" class="best-hotel-actions__price">cтоимость</a>
+         </div>
+       </div>
+       <div class="best-hotel-images">
+         <img src="image/pict/best-big--1.jpg" alt="best-hotel-1" class="l-best-hotel__main-image" width="806" height="570">
+         <img src="image/pict/best-big--1.jpg" alt="best-hotel-1" class="best-hotel__main-image" width="806" height="570">
+         <img src="image/pict/best-small--1.jpg" alt="best-hotel-preview-1" class="best-hotel__preview-image" width="350" height="350">
+       </div>
+     </div>
+   </div>
+   <div class="best-hotel">
+     <div class="best-hotel-wrapper clearfix">
+       <div class="best-hotel-info">
+        <div class="mobile-image__preview">
+          <img src="image/pict/best-small--1.jpg" alt="preview-1" width="288" height="288">
         </div>
-      </div>
-    </div>
+         <h3 class="best-hotel__name">Otium eco club (Сиде)</h3>
+         <div class="best-hotel-ratings">
+           <div class="best-hotel-ratings__stars">
+             <i class="icon-star-filled"></i>
+             <i class="icon-star-filled"></i>
+             <i class="icon-star-filled"></i>
+             <i class="icon-star-filled"></i>
+             <i class="icon-star-filled icon-star-filled--empty"></i>
+           </div>
+           <div class="best-hotel-ratings__numbers">
+             Рейтинг<span> (4.4)</span>
+           </div>
+         </div>
+         <div class="block-divisor best-hotel-info__divisor"></div>
+         <p class="best-hotel-info__facts">Интересный факт об отеле<br>
+         Интересный факт об отеле<br>Интересный факт об отеле</p>
+         <div class="best-hotel-actions">
+           <a href="#" class="best-hotel-actions__booking">Заказать</a>
+           <a href="#" class="best-hotel-actions__price">cтоимость</a>
+         </div>
+       </div>
+       <div class="best-hotel-images">
+         <img src="image/pict/best-big--2.jpg" alt="best-hotel-2" class="l-best-hotel__main-image" width="806" height="570">
+         <img src="image/pict/best-big--2.jpg" alt="best-hotel-2" class="best-hotel__main-image" width="806" height="570">
+         <img src="image/pict/best-small--2.jpg" alt="best-hotel-preview-2" class="best-hotel__preview-image" width="350" height="350">
+       </div>
+     </div>
+   </div>
+  </div>
+    <div class="show-more" id="id-show-more--best-hotels">еще (3)</div>
   </div>
 
   <div class="important-things">
     <div class="important-things-header">
-      <i class="divisor">Разделитель</i>
+      <div class="block-divisor"></div>
       <h2 class="important-things__title">Что с собой важно брать в Турцию</h2>
     </div>
     <ul class="important-things-list">
       <li class="important-things-list__item">
         <img src="image/pict/imp-1.png" alt="imp-1" width="165" height="165">
-        <p class="important-thing-list__title">Панамку для ребенка</p>
+        <p class="important-things-list__title">Панамку для ребенка</p>
       </li>
       <li class="important-things-list__item">
         <img src="image/pict/imp-2.png" alt="imp-2" width="165" height="165">
-        <p class="important-thing-list__title">Панамку для ребенка</p>
+        <p class="important-things-list__title">Панамку для ребенка</p>
       </li>
       <li class="important-things-list__item">
         <img src="image/pict/imp-3.png" alt="imp-3" width="165" height="165">
-        <p class="important-thing-list__title">Панамку для ребенка</p>
+        <p class="important-things-list__title">Панамку для ребенка</p>
       </li>
       <li class="important-things-list__item">
         <img src="image/pict/imp-4.png" alt="imp-4" width="165" height="165">
-        <p class="important-thing-list__title">Панамку для ребенка</p>
+        <p class="important-things-list__title">Панамку для ребенка</p>
       </li>
       <li class="important-things-list__item">
         <img src="image/pict/imp-5.png" alt="imp-5" width="165" height="165">
-        <p class="important-thing-list__title">Панамку для ребенка</p>
+        <p class="important-things-list__title">Панамку для ребенка</p>
       </li>
       <li class="important-things-list__item">
         <img src="image/pict/imp-6.png" alt="imp-6" width="165" height="165">
-        <p class="important-thing-list__title">Панамку для ребенка</p>
+        <p class="important-things-list__title">Панамку для ребенка</p>
       </li>
     </ul>
   </div>
 
   <div class="contacts">
     <div class="contacts-header">
-      <i class="divisor">Разделитель</i>
+      <div class="block-divisor"></div>
       <h2 class="contacts-header__title">Наши контакты</h2>
     </div>
-    <div class="container">
+    <div class="container clearfix">
       <div class="contacts-left">
-        <form action="" class="contacts-form">
-          <p class="contacts-form__title"></p>
-          <input type="text" class="contacts-form__name" id="id-contacts-form-name" placeholder="Имя">
+        <div class="mobile-address-card">
+            <div class="address-card__logo">
+              <img src="image/img/logo--address.jpg" alt="logo-2" width="175" height="40">
+            </div>
+            <address>ул. Верхний Вал 16/4  г. Киев, Украина</address>
+            <ul class="contacts-phones">
+              <li class="contacts-phones__item">+38 (044) 587-78-61;</li>
+              <li class="contacts-phones__item">+38(096) 800-90-09;</li>
+              <li class="contacts-phones__item">+38 (044) 587-78-61;</li>
+              <li class="contacts-phones__item">+38(096) 800-90-09;</li>
+            </ul>
+          </div>
+        <form action="#" class="contacts-form" method="POST">
+          <p class="contacts-form__title">Не можете приехать к нам?<br>Мы позаботились об этом!</p>
+          <input type="text" class="contacts-form__input" id="id-contacts-form-name" placeholder="Имя">
           <input type="text" class="contacts-form__input" id="id-contacts-form-email" placeholder="Email">
-          <input type="text" class="contacts-form__input" id="id-contacts-form-phone" placeholder="phone">
           <input type="text" class="contacts-form__input" id="id-contacts-form-email" placeholder="Телефон">
           <input type="text" class="contacts-form__input" id="id-contacts-form-address" placeholder="Адресс">
           <input type="submit" class="contacts-form__submit" id="id-contacts-form-sumbit" value="Отправить">
@@ -308,8 +367,11 @@
       </div>
       <div class="contacts-right">
         <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d1813.2134307056758!2d30.51089871742279!3d50.46525006327058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x40d4ce6a4b960633%3A0x901cf2d98ec0a100!2z0LLRg9C7LiDQktC10YDRhdC90ZbQuSDQktCw0LssIDE2LCDQmtC40ZfQsiwg0KPQutGA0LDQuNC90LA!3m2!1d50.464321999999996!2d30.511339999999997!5e0!3m2!1sru!2sru!4v1466592808471" width="670" height="375" frameborder="0" style="border:0" allowfullscreen></iframe>
           <div class="address-card">
-            <div class="address-card__logo"></div>
+            <div class="address-card__logo">
+              <img src="image/img/logo--address.jpg" alt="logo-2" width="175" height="40">
+            </div>
             <address>ул. Верхний Вал 16/4  г. Киев, Украина</address>
             <ul class="contacts-phones">
               <li class="contacts-phones__item">+38 (044) 587-78-61;</li>
@@ -324,7 +386,7 @@
   </div>
 
   <div class="footer">
-    <div class="container">
+    <div class="container clearfix">
       <div class="footer-left">&copy; 2011–2016 &laquo;Coral Travel&raquo;. Все права защищены.</div>
       <div class="m-footer-middle">Дизайн и разработка сайтов iProWeb</div>
       <div class="footer-right">Дизайн и разработка сайтов iProWeb</div>

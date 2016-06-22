@@ -4,16 +4,59 @@
 
 @media (max-width: 320px) {
 
-  *[class^="m-"] {
-    @include visible;
-  }
-
-  *[class^="s-"] {
-    @include invisible;
+  body {
+  @include no-indents;
+  font-family: $museo;
+  font-weight: 400;
+  color: $black;
+  background-color: $white;
+  overflow-x: hidden;
   }
 
   *[class^="l-"] {
     @include invisible;
+  }
+
+  .phones {
+    display: none;
+  }
+
+  .phone {
+    display: block;
+    padding: 11px 16px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $white;
+    font-family: $helvetica;
+    text-align: right;
+  }
+
+}
+
+@media (max-width: 320px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  *[class^="l-"] {
+    display: none;
+  }
+  .phones {
+    display: none;
+  }
+  .phone {
+    display: block;
+    padding: 11px 16px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    text-align: right;
   }
 }
 

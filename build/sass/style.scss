@@ -8,12 +8,13 @@ body {
   font-weight: 400;
   color: $black;
   background-color: $white;
+  overflow-x: hidden;
 }
 
 @media screen {
   
-  *[class^="m-"] {
-    @include invisible;
+  .sandwich-container, .phone, .mobile-menu, .mobile-address-card {
+    display: none;
   }
 
   *[class^="s-"] {
@@ -109,44 +110,49 @@ body {
   .promo {
     height: 645px;
     text-align: center;
+    margin-bottom: 40px;
     background:transparent url('../image/pict/bg-promo.jpg') center no-repeat;
   }
   
-.hot-tours {
+  .hot-tours {
 
-  &__title {
-    @include no-indents;
-    text-align: center;
-    font-family: $myriad;
-    font-weight: 400;
-    font-size: $font-size--h2;
-    line-height: $line-height--h2;
-    color: $blue-50;
-    text-transform: uppercase;
-  }
+    &__title {
+      @include no-indents;
+      margin-bottom: 15px;
+      text-align: center;
+      font-family: $myriad;
+      font-weight: 400;
+      font-size: $font-size--h2;
+      line-height: $line-height--h2;
+      color: $blue-50;
+      text-transform: uppercase;
+    }
 
-  &__offer {
-    @include no-indents;
-    text-align: center;
-    font-family: $museo;
-    font-weight: 400;
-    font-size: $font-size--h2;
-    line-height: $line-height--h2;
-    color: $red-87;
-    text-transform: uppercase;
+    &__offer {
+      @include no-indents;
+      margin-bottom: 30px;
+      text-align: center;
+      font-family: $museo;
+      font-weight: 400;
+      font-size: $font-size--h2;
+      line-height: $line-height--h2;
+      color: $red-87;
+      text-transform: uppercase;
+    }
   }
-}
 
   .block-divisor {
     width: 81px;
     height: 7px;
-    margin: 0 auto;
+    margin: $center;
+    margin-bottom: 30px;
     background: #ffffff url('../image/img/divisor.png') center no-repeat;
   }
   
   .hot-tour {
+    margin-bottom: 30px;
     padding-top: 29px;
-    height: 409px;
+    min-height: 409px;
     background:#ffe8a2 url('../image/pict/bg-hot-tours.jpg') center no-repeat;
 
     &__image {
@@ -159,13 +165,14 @@ body {
     &__info {
       float: right;
       width: 585px;
-      height: 370px;
+      min-height: 370px;
       background-color: $gray-96;
       border-top: 5px solid $red-87;
     }
 
     &__title {
       @include no-indents;
+      margin-left: 42px;
       padding: 24px 0;
       font-family: $myriad;
       font-weight: 400;
@@ -179,6 +186,7 @@ body {
       line-height: 1.3;
       color: $black-8;
       font-family: $museo;
+      margin-left: 42px;
 
       span {
         background-color: #ffe8a2;
@@ -189,6 +197,8 @@ body {
     &__text {
       font-size: $font-size--base;
       line-height: $line-height--base;
+      padding: 0 42px;
+      margin-bottom: 38px;
     }
 
     &__order-price {
@@ -199,6 +209,7 @@ body {
       width: 246px;
       height: 54px;
       margin-right: 9px;
+      margin-left: 15px;
       display: inline-block;
       background-color: $gray-94;
       text-align: center;
@@ -246,6 +257,7 @@ body {
 
   .hot-tour-control {
     @include no-indents;
+    margin-bottom: 75px;
     text-align: center;
 
     &__item {
@@ -271,9 +283,11 @@ body {
   }
 
   .just-turkish {
+    margin-bottom: 80px;
 
     &__title {
       @include no-indents;
+      margin-bottom: 40px;
       text-align: center;
       font-family: $myriad;
       font-weight: 400;
@@ -285,12 +299,13 @@ body {
   }
   .turkish-features {
     width: 1170px;
-    margin: 0 auto;
+    margin: $center;
   }
 
   .features-list {
     @include no-text;
     margin-left: -30px;
+    margin-bottom: 20px;
     counter-reset: feature;
 
     &__item {
@@ -302,6 +317,10 @@ body {
       margin-bottom: 30px;
       box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
       overflow: hidden;
+
+      &:hover .features-list__text {
+        left: 0;
+      }
     }
 
     &__text {
@@ -318,10 +337,8 @@ body {
       line-height: 24px;
       color: #141f36;
       background-color: rgba(255, 232, 162, 0.82);
-
-      &:hover {
-        left: 0;
-      }
+      transition-property: left;
+      transition-duration: 0.5s;
 
       &::before {
         counter-increment: feature;
@@ -337,4 +354,1131 @@ body {
     }
   }
 
+  .show-more {
+    position: relative;
+    width: 184px;
+    margin: $center;
+    padding: 4px 0;
+    padding-left: 30px;
+    width: 152px;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $museo;
+    color: #2c2e37;
+    border: 1px solid #96a2ab;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 47px;
+      content: "";
+      width: 1px;
+      height: 38px;
+      background-color: #e2e2e2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 13px;
+      width: 12px;
+      height: 12px;
+      background-color: $white;
+      border: 3px solid #ffe8a2;
+      border-top-color: $white;
+      border-left-color: $white;
+      transform: rotate(45deg);
+    }
+  }
+
+  .facts-header {
+    margin-bottom: 40px;
+
+    &__title {
+      @include no-indents;
+      text-align: center;
+      font-family: $myriad;
+      font-weight: 400;
+      font-size: $font-size--h2;
+      line-height: $line-height--h2;
+      color: $blue-50;
+      text-transform: uppercase;
+    }
+  }
+
+  .facts-list-wrapper {
+    width: 970px;
+    margin: $center;
+  }
+
+  .facts-list {
+    @include no-text;
+    position: relative;
+    margin-left: -72px;
+    margin-bottom: 60px;
+
+    &__control {
+      position: absolute;
+      top: 88px;
+      left: 35px;
+      width: 15px;
+      height: 15px;
+      border-top: 3px solid $red-87;
+      border-left: 3px solid $red-87;
+      background-color: $white;
+      transform: rotate(-45deg);
+      cursor: pointer;
+
+      &--right {
+        left: auto;
+        right: -35px;
+        transform: rotate(135deg);
+      }
+
+      &--disabled {
+        border-top: 3px solid $gray-84;
+        border-left: 3px solid $gray-84;
+      }
+    }
+
+    &__item {
+      position: relative;
+      display: inline-block;
+      width: 188px;
+      margin-left: 72px;
+      vertical-align: top;
+
+      &:last-child::after {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 92px;
+        right: -40px;
+        width: 6px;
+        height: 6px;
+        background-color: $gray-84;
+        border-radius: 50%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 210px;
+        left: 67px;
+        width: 54px;
+        height: 3px;
+        background-color: $red-87;
+      }
+    }
+
+    &__text {
+      @include no-indents;
+      margin-top: 30px;
+      width: 168px;
+      padding: 10px;
+      font-size: $font-size--base;
+      line-height: $line-height--base;
+      color: $black-8;
+      text-align: center;
+    }
+  }
+
+  .our-company {
+    margin-bottom: 80px;
+
+    &-header__title {
+      @include no-indents;
+      margin-bottom: 60px;
+      text-align: center;
+      font-family: $myriad;
+      font-weight: 400;
+      font-size: $font-size--h2;
+      line-height: $line-height--h2;
+      color: $blue-50;
+      text-transform: uppercase;
+    }
+  }
+
+  .company-features {
+    @include no-text;
+    @include no-indents;
+    width: 1170px;
+    margin: $center;
+    background-color: $white;
+    box-shadow: 0 0 21px rgba(6, 6, 6, 0.13);
+
+    &__item {
+      position: relative;
+      display: inline-block;
+      width: 290px;
+      height: 280px;
+      padding: 50px;
+      vertical-align: top;
+      background-color: $white;
+      text-align: center;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &--img-flag {
+      background-color: #ffe8a2;
+      }
+
+      &--img-flag::after {
+        position: absolute;
+        content: "";
+        top: 50px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-right:10px solid $white;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+      }
+
+      &--img-circle::after {
+        position: absolute;
+        content: "";
+        left: 50px;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-bottom:10px solid $white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      &--img-pig::after {
+        position: absolute;
+        content: "";
+        top: 50px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left:10px solid $white;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+      }
+
+      &--img-circle {
+      background-color: #95d183;
+      }
+
+      &--img-pig {
+      background-color: #52abdb;
+      }
+
+    }
+
+    &__tag {
+      font-size: 12px;
+      line-height: 13px;
+      color: #0083b3;
+      text-transform: uppercase;
+      font-family: $museo;
+    }
+    
+    &__title {
+      @include no-indents;
+      font-family: $myriad;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 26px;
+      text-transform: uppercase;
+      color: #212121;
+    }
+
+    &__text {
+        @include no-indents;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #888888;
+    }
+
+    &__page {
+      position: absolute;
+      bottom: 45px;
+      font-style: italic;
+      font-family: $myriad;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  .speed-order {
+    min-height: 727px;
+    margin-bottom: 55px;
+    background: $blue-98 url("../image/pict/bg-speed-order.jpg") center no-repeat;
+    border-top: 1px solid transparent;
+
+    &-form {
+      width: 1170px;
+      margin: $center;
+      margin-top: 427px;
+      min-height: 245px;
+      border-top: 5px solid $red-87;
+      background-color: $white;
+      box-shadow: 0 0 5px #eee;
+    }
+
+    &-form__slogan {
+      width: 582 - 140px;
+      margin: 30px auto;
+      padding: 10px 70px;
+      background-color: $red-87;
+      font-size: 30px;
+      line-height: 36px;
+      color: $white;
+      text-align: center;
+    }
+
+    &-form__submit {
+      padding: 9px 25px;
+      font-family: $myriad;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 27px;
+      color: $white;
+      text-transform: uppercase;
+      border: none;
+      vertical-align: top;
+      background-color: #00c7fb;
+      cursor: pointer;
+    }
+  }
+
+  .fields-row {
+    display: inline-block;
+    padding-left: 50px;
+
+    &__input {
+      box-sizing: border-box;
+      width: 237px;
+      height: 47px;
+      margin-right: 15px;
+      padding: 10px 10px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 1px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 27px;
+      font-family: $myriad;
+      vertical-align: top;
+
+      &:focus {
+        border: 1px solid #4fc4f6;
+      }
+
+      &--email {
+        width: 336px;
+      }
+    }
+  }
+
+  .require-field-wrapper {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 25px;
+      height: 5px;
+      background-color: $red-87;
+    }
+  }
+
+  .best-hotels {
+    margin-bottom: 90px;
+  }
+
+  .best-hotels__title {
+    @include no-indents;
+    margin-bottom: 120px;
+    text-align: center;
+    font-family: $myriad;
+    font-weight: 400;
+    font-size: $font-size--h2;
+    line-height: $line-height--h2;
+    color: $blue-50;
+    text-transform: uppercase;
+  }
+    
+    .best-hotels-list-wrapper {
+      margin-bottom: 55px;
+    }
+  .mobile-image__preview {
+    display: none;
+  }
+  .best-hotel {
+    background-color: $gray-96;
+    min-height: 667px;
+    margin-bottom: 100px;
+    
+    &-wrapper {
+      width: 1170px;
+      margin: $center;
+    }
+
+    &-info {
+      width: 400px;
+      float: left;
+    }
+
+    &__name {
+      @include no-indents;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      font-family: $myriad;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 43px;
+      text-transform: uppercase;
+      color: $black-22;
+    }
+    &-ratings {
+      margin-bottom: 50px;
+    }
+
+    &-ratings__stars {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &-ratings__numbers {
+      padding-left: 5px;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 18px;
+    }
+
+    &-images {
+      width: 770px;
+      float: right;
+      position: relative;
+    }
+
+    &-info__divisor {
+      background-color: $gray-96;
+      margin-left: 0;
+    }
+
+    &-info__facts {
+      @include no-indents;
+      margin-bottom: 50px;
+      font-size: 14px;
+      line-height: 26px;
+      color: #949494;
+    }
+
+    &-actions {
+      @include no-text;
+    }
+
+    &-actions__booking {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background-color: $blue-50;
+      margin-right: 20px;
+      background:$blue-50 url('../image/img/ico--windows.png') center no-repeat;
+      vertical-align: middle;
+    }
+
+    &-actions__price {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 26px;
+      color: $white;
+      font-family: $myriad;
+      padding: 27px 50px;
+      vertical-align: middle;
+      background-color: $blue-98;
+      text-decoration: none;
+    }
+
+    &__main-image {
+      position: absolute;
+      left: 145px;
+      top: -35px;
+    }
+
+    &__preview-image {
+      position: absolute;
+      border: 3px solid $white;
+      top: 275px;
+      left: 60px;
+    }
+
+  }
+  .best-hotel:last-child {
+    margin-bottom: 0;
+  }
+
+  .best-hotel:nth-child(even) {
+
+    .best-hotel-info {
+      width: 360px;
+      padding-left: 40px;
+      float: right;
+    }
+
+    .best-hotel-images {
+      float: left;
+    }
+
+    .best-hotel__main-image {
+      left: -180px;
+    }
+
+    .best-hotel__preview-image {
+      left: 360px;
+    }
+
+    .best-hotel-actions__price {
+      background-color: $red-87;
+    }
+  }
+
+  .icon-star-filled {
+    margin-right: 5px;
+    color: #f5c63b;
+
+    &--empty {
+      color: #6e7882;
+    }
+  }
+
+  .important-things {
+
+    &__title {
+      @include no-indents;
+      margin-bottom: 60px;
+      text-align: center;
+      font-family: $myriad;
+      font-weight: 400;
+      font-size: $font-size--h2;
+      line-height: $line-height--h2;
+      color: $blue-50;
+      text-transform: uppercase;
+    }
+
+    &-list {
+      @include no-indents;
+      @include no-text;
+      list-style-type: none;
+      width: 1170px;
+      margin: 0 auto;
+    }
+
+    &-list__item {
+      position: relative;
+      display: inline-block;
+      margin-left: 36px;
+      margin-bottom: 60px;
+      vertical-align: top;
+      min-height: 250px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      img {
+        margin-bottom: 38px;
+        border-radius: 50%;
+      }
+
+      img:hover {
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+      }
+
+      &:hover .important-things-list__title,
+      &:hover::after {
+        visibility: visible;
+      }
+
+      &::after {
+        visibility: hidden;
+        content: "";
+        position: absolute;
+        top: 180px;
+        left: 74px;
+        width: 15px;
+        height: 15px;
+        border-right: 2px solid #275880;
+        border-bottom: 2px solid #275880;
+        transform: rotate(-135deg);
+      }
+    }
+
+    &-list__title {
+      visibility: hidden;
+      @include no-indents;
+      width: 145px;
+      margin: 0 auto;
+      font-family: $myriad;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #ffffff;
+      padding: 13px 5px;
+      background-color: $red-87;
+      text-align: center;
+    }
+  }
+
+  .contacts {
+    margin-bottom: 100px;
+    &-header {
+
+
+      &__title {
+        @include no-indents;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: $myriad;
+        font-weight: 400;
+        font-size: $font-size--h2;
+        line-height: $line-height--h2;
+        color: $blue-50;
+        text-transform: uppercase;
+      }
+    }
+
+    &-left {
+      width: 470px;
+      float: left;
+      margin-right: 30px;
+      border-top: 5px solid $red-87;
+    }
+
+    &-right {
+      width: 670px;
+      float: right;
+    }
+
+    &-form__title {
+      @include no-indents;
+      padding: 10px 0;
+      font-size: 24px;
+      line-height: 29px;
+      color: #141f36;
+      font-family: $myriad;
+      margin-left: 50px;
+    }
+
+    &-form__input {
+      box-sizing: border-box;
+      width: 376px;
+      border: 1px solid #d6d6d6;
+      padding: 12px 16px;
+      margin-left: 50px;
+      margin-bottom: 14px;
+      font-family: $myriad;
+    }
+
+    &-form__submit {
+      padding: 10px 20px;
+      border: none;
+      font-family: $myriad;
+      font-size: 16px;
+      line-height: 20px;
+      background-color: #00c7fb;
+      color: $white;
+      text-transform: uppercase;
+      margin-left: 50px;
+    }
+
+    &-form__note {
+      @include no-text;
+      color: #a3a3a3;
+      font-family: $myriad;
+      font-size: 15px;
+      font-weight: 400;
+      margin-left: 50px;
+    }
+
+  }
+
+  .map {
+    position: relative;
+    width: 670px;
+    min-height: 375px;
+    background: #ffffff url("../image/pict/bg-map.jpg") center no-repeat;
+  }
+
+  .address-card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: $white;
+    width: 310px;
+    height: 146px;
+    overflow: hidden;
+    padding-top: 8px;
+
+    &__logo {
+      margin-left: 17px;
+    }
+
+    address {
+      position: relative;
+      color: #424255;
+      font-family: $myriad;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 27px;
+      font-style: normal;
+      padding-left: 50px;
+
+      &::before {
+        position: absolute;
+        content: "\e801";
+        font-family: "fontello";
+        left: 28px;
+        top: 1px;
+        color: #424255;
+      }
+    }
+  }
+
+  .contacts-phones {
+    @include no-indents;
+    position: relative;
+    list-style-type: none;
+    color: #424255;
+    padding-left: 50px;
+
+    &__item {
+      display: inline-block;
+      font-family: $myriad;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+
+    }
+
+    &::before {
+      position: absolute;
+      content: "\e802";
+      font-family: "fontello";
+      top: 2px;
+      left: 25px;
+      transform: rotate(135deg);
+    }
+  }
+
+  .footer {
+    background-color: $blue-50;
+
+    &-left {
+      padding: 21px 0;
+      float: left;
+      font-family: Arial;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+    }
+
+    &-right {
+      padding: 21px 0;
+      float: right;
+      font-family: Arial;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+    }
+  }
 }
+
+@media (max-width: 320px) {
+  .main-menu {
+
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  *[class^="l-"] {
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+    padding: 0 5%;
+  }
+  .phones {
+    display: none;
+  }
+  .phone {
+    display: block;
+    float: right;
+    width: 70%;
+    padding: 11px 16px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    text-align: right;
+  }
+
+  .sandwich-container {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 6px;
+    padding: 17px 0;
+  }
+
+  .sandwich {
+    @include no-text;
+    position: relative;
+    width: 35px;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #ffffff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 35px;
+      height: 7px;
+      background-color: $white;
+      border-radius: 3px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 35px;
+      height: 7px;
+      background-color: $white;
+      border-radius: 3px;
+    }
+  }
+
+  .logo {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .promo {
+    display: none;
+  }
+
+  .hot-tour {
+    background-image: none;
+    background-color: #ffe8a2;
+    min-height: 409px;
+    padding-bottom: 29px;
+    
+    img {
+        width: 288px;
+        height: 144px;
+      }
+
+    &__image {
+      display: block;
+      float: none;
+      width: 288px;
+      height: auto;
+    }
+
+    &__info {
+      display: block;
+      float: none;
+      width: 288px;
+      border-top: none;
+    }
+
+    &__title {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    &__date {
+      padding-left: 4%;
+      font-weight: 700;
+
+      span {
+        font-weight: normal;
+      }
+    }
+
+    &__text {
+      padding: 0 4%;
+    }
+
+    &__order-price {
+      width: 100%;
+    }
+
+    &__prices {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__buy {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .hot-tour-control {
+    margin-bottom: 30px;
+  }
+
+  .features-list {
+
+    &__item {
+      display: block;
+      width: 320px;
+      height: 256px;
+    }
+
+    &__text {
+      padding-right: 20px;
+    }
+  }
+
+  .facts-list__control {
+    display: none;
+  }
+  .facts-list-wrapper {
+    width: 90%;
+    padding: 0 5%;
+  }
+
+  .facts-list {
+    width: 100%;
+    margin: 0;
+  }
+
+  .facts-list__item {
+    width: 188px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .company-features {
+    width: 100%;
+
+    &__item {
+    display: block;
+    width: 290px;
+    height: 280px;
+    padding: 20px;
+    }
+
+    &__tag {
+      display: block;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    &__page {
+      bottom: 20px;
+    }
+  }
+
+  .speed-order {
+
+    &-form {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 400px;
+    }
+
+    &-form__slogan {
+      display: block;
+      width: 100%;
+      font-size: 22px;
+      line-height: 27px;
+      margin: auto;
+      margin-bottom: 10px;
+      padding: 0;
+    }
+
+    &-form__submit {
+      display: block;
+      width: 100%
+    }
+  }
+
+  .fields-row {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+
+    &__input {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+
+    &--email {
+      width: 100%;
+    }
+  }
+
+  .require-field-wrapper {
+    display: block;
+    width: 100%;
+
+    &::before {
+      left: 5%;
+    }
+  }
+
+  .best-hotels {
+    margin-bottom: 50px;
+
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
+  .mobile-image__preview {
+    display: block;
+    width: 90%;
+  }
+  .best-hotel {
+    margin: 0;
+
+    &-wrapper {
+      width: 100%;
+      margin: 0;
+    }
+
+    &-info {
+      width: 90%;
+      padding: 0 5%;
+      float: none;
+      padding-top: 5%;
+    }
+
+    &-images {
+     display: none;
+    }
+
+    &-ratings {
+      margin-bottom: 20px;
+    }
+
+    &-info__facts {
+      margin-bottom: 20px;
+    }
+
+    &-actions__price {
+      padding: 27px 30px;
+    }
+  }
+
+  .best-hotel:nth-child(even) {
+
+    .best-hotel-info {
+      width: 90%;
+      padding: 0 5%;
+      float: none;
+      padding-top: 5%;
+    }
+
+    .best-hotel-images {
+      display: none;
+    }
+
+    .best-hotel-actions__price {
+      background-color: $red-87;
+    }
+  }
+
+  .important-things {
+    display: none;
+  }
+
+  .contacts {
+
+    &-left {
+      float: none;
+      width: 90%;
+      padding: 0 5%;
+    }
+
+    &-right {
+      float: none;
+    }
+
+    &-form__title {
+      margin-left: 0;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    &-form__input {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &-form__submit {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      margin-left: 0;
+    }
+
+    &-form__note {
+      display: none;
+    }
+  }
+
+  .map {
+   display: none;
+  }
+
+  .mobile-address-card {
+    display: block;
+  }
+}
+
+
+
+
+
